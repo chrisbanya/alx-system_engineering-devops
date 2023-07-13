@@ -1,0 +1,2 @@
+#!/bin/bash
+while IFS=':' read -r user _ uid _ _ home _; do if (( uid >= 1000 )); then echo "User: $user, Home Directory: $home" fi done < /etc/passwd | sort -k 2
